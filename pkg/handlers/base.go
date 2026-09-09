@@ -194,7 +194,7 @@ func (h *BotHandler) CheckForceSubscription(ctx context.Context, userID int64) (
 func (h *BotHandler) SendForceSubPrompt(ctx context.Context, chatID int64, retryPayload string) error {
 	var inviteLink string
 	if h.cfg.ForceSubChannelID != 0 {
-		inviteLink = fmt.Sprintf("https://t.me/c/%d", -h.cfg.ForceSubChannelID)
+		inviteLink = fmt.Sprintf("https://t.me/smile_uploads)
 	}
 
 	var kbRows [][]bot.InlineKeyboardButton
