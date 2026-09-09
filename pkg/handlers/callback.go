@@ -158,14 +158,7 @@ func (h *BotHandler) HandleCallbackQuery(ctx context.Context, cq *bot.CallbackQu
 	if data == "nav_home" {
 		_ = h.tg.AnswerCallbackQuery(ctx, cq.ID, "", false)
 		if cq.Message != nil {
-			welcomeText := `👋 <b>Welcome to FileStore Bot!</b>
-
-I can store files securely in Telegram and generate unique, permanent retrieval links.
-
-📦 <b>How to use:</b>
-1. Send or forward any Document, Video, Audio, or Photo to me.
-2. Receive a fast, shareable deep link.
-3. Access your file anytime using that link.`
+			welcomeText := `👋 <b>This Bot is Specially made for @Smile_Uploads 💗</b>`
 			kb := h.GetStartKeyboard()
 			_ = h.tg.EditMessageText(ctx, cq.Message.Chat.ID, cq.Message.MessageID, welcomeText, kb)
 		}
