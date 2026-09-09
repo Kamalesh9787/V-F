@@ -112,11 +112,11 @@ func (h *BotHandler) GetAboutText(ctx context.Context) string {
 │
 ├🔹 <b>Hosted On:</b> <a href="https://vercel.com">Vercel</a>
 │
-├🔸 <b>Developer:</b> <a href="https://github.com/mrabhi2k3">MrAbhi2k3</a>
+├🔸 <b>Developer:</b> <a href="https://t.me/tmv_admin_bot">MrAbhi2k3</a>
 │
-├🔹 <b>Bot Support:</b> <a href="https://t.me/%s">Support</a>
+├🔹 <b>Bot Support:</b> <a href="https://t.me/tmv_admin_bot">Support</a>
 │
-├🔸 <b>Bot Updates:</b> <a href="https://github.com/MrAbhi2k3/TG-FileStore">Updates</a>
+├🔸 <b>Bot Updates:</b> <a href="https://t.me/tmv_admin_bot">Updates</a>
 │
 ╰──────[ 😎 ]───────────⍟`,
 		botUsername,
@@ -194,13 +194,13 @@ func (h *BotHandler) CheckForceSubscription(ctx context.Context, userID int64) (
 func (h *BotHandler) SendForceSubPrompt(ctx context.Context, chatID int64, retryPayload string) error {
 	var inviteLink string
 	if h.cfg.ForceSubChannelID != 0 {
-		inviteLink = fmt.Sprintf("https://t.me/smile_uploads)
+		inviteLink = fmt.Sprintf("https://t.me/c/%d", -h.cfg.ForceSubChannelID)
 	}
 
 	var kbRows [][]bot.InlineKeyboardButton
 	if inviteLink != "" {
 		kbRows = append(kbRows, []bot.InlineKeyboardButton{
-			{Text: "📢 Join Channel", URL: inviteLink},
+			{Text: "📢 Join Channel", URL: "https://t.me/smile_uploads"},
 		})
 	}
 
